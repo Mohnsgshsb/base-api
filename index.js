@@ -22,6 +22,8 @@ app.get('/donate', (req, res) => {
 const listApi = require('./lib/api')
 app.use('/api', listApi)
 
+app.use('/api/download/tikv2', require('./routes/download/tikv2'))
+
 const openai = require('./lib/openai')
 app.use('/api/openai', openai)
 
